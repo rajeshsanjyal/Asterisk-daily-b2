@@ -1,6 +1,5 @@
 package com.asterisk.daily.factory;
 
-import com.asterisk.daily.factory.request.PaymentRequest;
 
 public class EsewaPayment extends Payment{
 

@@ -5,6 +5,7 @@ public class PaymentFactory {
         switch (paymentType){
             case ESEWA:
                 return  new EsewaPayment();
+
         }
         return null;
     }
