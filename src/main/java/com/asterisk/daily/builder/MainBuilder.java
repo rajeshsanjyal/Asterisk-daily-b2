@@ -6,13 +6,20 @@ public class MainBuilder {
 //                .id(1L)
 //                .numberOfMember(1)
 //                .name("Alok");
-        Department department=Department
+//        Department department=Department
+//                .builder()
+//                .id(1L)
+//                .name("Alok")
+//                .numberOfMember(200)
+//                .build();
+//        System.out.println(department);
+
+        Child child=Child
                 .builder()
                 .id(1L)
-                .name("Alok")
-                .numberOfMember(200)
+                .fname("Rajesh")
+                .lname("Sanjyal")
                 .build();
-        System.out.println(department);
-
+        System.out.println(child);
     }
 }
