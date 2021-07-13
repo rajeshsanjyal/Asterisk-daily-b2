@@ -10,7 +10,7 @@ public class Car {
     private Engine engine;
 
 
-    public Car(){
+    public Car(FourStrokeEngine fourStrokeEngine){
 //        engine.start();
     }
 }

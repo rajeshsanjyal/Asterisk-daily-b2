@@ -4,8 +4,6 @@ public class MobilePhone {
     public static void main(String[] args) {
         new MobilePhone().chargeMe();
 
-//        Target target =new MobilePhoneCharger();
-//        Volt volt=target.getVolt();
     }
     public void chargeMe(){
         Target target=new MobilePhoneCharger();
