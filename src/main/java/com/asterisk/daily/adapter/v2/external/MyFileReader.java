@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class MyFileReader implements FileReader{
     @Override
-    public String[] read() {
+    public String read() {
         ClassLoader classLoader = getClass().getClassLoader();
         String[] lines=new String[1];
 //        String[] lines = new String[0];
@@ -16,20 +16,22 @@ public class MyFileReader implements FileReader{
             java.io.FileReader fr = new java.io.FileReader(file);
             BufferedReader br = new BufferedReader(fr);
 
-            lines = new String[1];
+//            lines = new String[1];
             String line;
             int i = 0;
             while ((line = br.readLine()) != null) {
                 if (i > 0) {
                     String[] temp = new String[i + 1];
-                    for (int j = 0, linesLength = lines.length; j < linesLength; j++) {
+                    for (int j = 0; j < lines.length; j++) {
                         temp[j] = lines[j];
                     }
                     i++;
                     temp[i - 1] = line;
+                    temp[i - 1]=line;
                     lines = temp;
                 }else {
-                    lines[i++] = line;
+                    lines[i] = line;
+                    i++;
                 }
             }
             fr.close();
@@ -40,6 +42,6 @@ public class MyFileReader implements FileReader{
             e.printStackTrace();
         }
 
-        return lines;
+        return String.valueOf(lines);
     }
 }
